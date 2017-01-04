@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "production": "webpack -p"
+    "production": "webpack -p",
+    //run a local server - grab index.js -- run through babel loader -- jsx to js -- output to dist/index_bundle.js
+    // and then html webpack plugin runs and throw into index.html which references the file I made [localhost:8080]!!! woohoo!!
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
