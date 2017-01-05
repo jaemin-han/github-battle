@@ -6,15 +6,15 @@ var transparentBg = require('../styles').transparentBg;
 function Prompt (props) {
     return (
       <div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={transparentBg}>
-        <h1>{this.props.header}</h1>
+        <h1>{props.header}</h1>
         <div className="col-sm-12">
-          <form onSubmit={this.props.onSubmitUser}>
+          <form onSubmit={props.onSubmitUser}>
             <div className="form-group">
               <input
                 className="form-control"
                 placeholder="Github Username"
-                onChange={this.props.onUpdateUser}
-                value={this.props.username}
+                onChange={props.onUpdateUser}
+                value={props.username}
                 type="text" />
             </div>
 
@@ -31,7 +31,7 @@ function Prompt (props) {
     )
   }
 
-Prompt.propTypes = {
+Prompt.PropTypes = {
   onSubmitUser: PropTypes.func.isRequired,
   onUpdateUser: PropTypes.func.isRequired,
   header: PropTypes.string.isRequired,
