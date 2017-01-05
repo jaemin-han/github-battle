@@ -19,7 +19,8 @@
   "homepage": "https://github.com/jaemin-han/github-battle#readme",
   "dependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -30,4 +31,3 @@
     "webpack-dev-server": "^1.16.2"
   }
 }
-
