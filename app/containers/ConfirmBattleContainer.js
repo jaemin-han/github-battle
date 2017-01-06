@@ -9,7 +9,7 @@ var ConfirmBattleContainer = React.createClass({
   getInitialState: function () {
     return {
       isLoading: true,
-      playersInfo: []
+      playersInfo: [],
     }
   },
 
@@ -25,7 +25,7 @@ var ConfirmBattleContainer = React.createClass({
         // console.log('PLAYERS', players)
         this.setState({
           isLoading: false,
-          playerInfo: [players[0], players[1]]
+          playersInfo: [players[0], players[1]]
         })
       }.bind(this))
     // fetch info from github and then update state
@@ -42,8 +42,8 @@ var ConfirmBattleContainer = React.createClass({
   render: function() {
     return (
       <ConfirmBattle
-      isLoading={this.state.isLoading}
-      playersInfo={this.state.playersInfo}
+        isLoading={this.state.isLoading}
+        playersInfo={this.state.playersInfo}
       />
     )
   }
