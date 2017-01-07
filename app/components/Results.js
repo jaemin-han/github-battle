@@ -21,22 +21,26 @@ function StartOver () {
 function Tie (props) {
   return (
     <MainContainer>
-      <h1>It's a Tie!</h1>
+      <h1>{`It's a Tie!`}</h1>
       <StartOver />
     </MainContainer>
   )
 }
+
 function Results (props) {
   if (props.isLoading === true) {
-    return <Loading text='One Moment' speed={100}/>
+    return <Loading />
   }
+
   if (props.scores[0] === props.scores[1]) {
     return (
       <Tie scores={props.scores} playersInfo={props.playersInfo}/>
     )
   }
+
   var winningIndex = props.scores[0] > props.scores[1] ? 0 : 1;
   var losingIndex = winningIndex === 0 ? 1 : 0;
+
   return (
     <MainContainer>
       <h1>Results</h1>
@@ -52,8 +56,10 @@ function Results (props) {
     </MainContainer>
   )
 }
+
 Results.propTypes = {
   playersInfo: PropTypes.array.isRequired,
   scores: PropTypes.array.isRequired
 }
+
 module.exports = Results;

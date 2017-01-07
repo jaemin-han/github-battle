@@ -1,5 +1,5 @@
 var React = require('react');
-var PropTypes = React.PropTypes;
+var PropTypes = React.PropTypes
 
 function UserDetails (user) {
   return (
@@ -29,7 +29,7 @@ UserDetails.propTypes = {
     location: PropTypes.string,
     login: PropTypes.string.isRequired,
     name: PropTypes.string,
-    public_repos: PropTypes.number.isRequired
+    public_repos: PropTypes.number.isRequired,
   })
 }
 
