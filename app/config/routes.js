@@ -10,6 +10,9 @@ var PromptContainer = require('../containers/PromptContainer');
 var ConfirmBattleContainer = require('../containers/ConfirmBattleContainer');
 var ResultsContainer = require('../containers/ResultsContainer');
 
+// 'Main' component will be always active. Whenever the url changes, the main component will render its header or footer
+// and any child routes that are nested under 'Main'
+
 var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>

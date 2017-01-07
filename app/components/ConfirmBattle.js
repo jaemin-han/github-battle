@@ -8,6 +8,11 @@ var UserDetails = require('./UserDetails');
 var MainContainer = require('./MainContainer');
 var Loading = require('./Loading');
 
+
+
+// if props.isLoading is set to true -> render 'loading'
+// if not -> 'confirm battle'
+
 function ConfirmBattle (props) {
   return props.isLoading === true
     ? <Loading />

@@ -13,10 +13,23 @@ var ConfirmBattleContainer = React.createClass({
     }
   },
 
+// +++++++++++++++++++++++++ React Life Cycle ++++++++++++++++++++++
+// 1. getInitialState
+//   - we establish our first initial state
+// 2. componentWillMount will run before it 'renders'
+// 3. Once 'render function' renders, componentDidMount will run
+// 4. Anytime this component receives a new props, componentWillReceiveProps will run
+// 5. once we navigate to a different route or switch away from this particular component,
+//     componentWillUnmount occurs
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
   // componentWillMount: function () {
   //   console.log('componentWillMount')
   // },
 
+// This function is fetchting information from github and then update state
+// Once 'ConfirmBattle' renders to the view, (componentDidMount) callback function is going to run
+// and gets playerOne and playerTwo query information from 'PromptContainer.js' file by fetching github api
   componentDidMount: function () {
     // console.log('componentDidMount')
     var query = this.props.location.query;
@@ -48,6 +61,8 @@ var ConfirmBattleContainer = React.createClass({
     })
   },
 
+
+// isLoading and playersInfo from componentDidMount function and info taken from PromptContainer
   render: function() {
     return (
       <ConfirmBattle
