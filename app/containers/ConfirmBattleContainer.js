@@ -40,6 +40,7 @@ var ConfirmBattleContainer = React.createClass({
           isLoading: false,
           playersInfo: [players[0], players[1]]
         })
+      //.bind(this) allows to set a context. 'this' keyword inside of this function is going to be whatever I pass in to .bind
       }.bind(this))
     // fetch info from github and then update state
   },
